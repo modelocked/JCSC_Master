@@ -1,0 +1,364 @@
+% ============================
+% Referencing_Formatting.tex — Maynooth Harvard compliant
+% Master version — corrected
+% ============================
+
+\DeclareNameAlias{default}{family-given}
+\DeclareNameAlias{sortname}{family-given}
+\DeclareNameAlias{author}{family-given}
+
+% ----------------------------
+% IN-TEXT MULTI-CITE ORDERING — chronological (oldest first)
+% MU Harvard 2.4 / Handbook 2.2: multiple works in one bracket are listed
+% "in year order (oldest first), separated by a semi-colon".
+%
+% This 'ynt' (year–name–title) template sorts WITHIN a \cite bracket by year,
+% then surname, then title. With sortcites=true it governs the order keys
+% appear inside (Author, 1916; Author, 1988; ...).
+%
+% The reference LIST must stay alphabetical: pin it back with
+%   \printbibliography[sorting=nyt]
+% so this year-first template applies to cites only, not the bibliography.
+% biber-only; requires a full biber rerun (not just LaTeX passes) to take effect.
+% ----------------------------
+\DeclareSortingTemplate{ynt}{
+	\sort{\field{presort}}
+	\sort{\field{sortyear}\field{year}}      % primary key: publication year, ascending
+	\sort{\field{sortname}\field{author}\field{editor}}  % tie-break: surname
+	\sort{\field{sorttitle}\field{title}}    % final tie-break: title
+}
+
+\ExecuteBibliographyOptions{
+	sorting=ynt,
+	sortcites=true,
+	dashed=false,
+	urldate=long,
+	dateabbrev=false
+}
+
+% Remove automatic "URL:" prefix — Maynooth wants bare URL
+\DeclareFieldFormat{url}{#1}
+
+% ----------------------------
+% In-text citations: (Surname, Year)
+% ----------------------------
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+% Maynooth-style pinpoint citations: (Author, Year: page)
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+\renewcommand*{\postnotedelim}{\addcolon\space}
+
+
+% Parenthetical cites use "&"; running text (\textcite) and the reference list use "and"
+\DeclareDelimFormat{finalnamedelim}{\addspace\&\addspace}
+\DeclareDelimFormat[bib,biblist,textcite,posscite]{finalnamedelim}{\addspace\bibstring{and}\addspace}
+
+% ----------------------------
+% FIX: Suppress BibLaTeX's second date print.
+% name+year prints year once; these macros stop it firing again.
+% ----------------------------
+\renewbibmacro*{date}{}
+\renewbibmacro*{date+extradate}{}
+
+% ----------------------------
+% YEAR ONLY in bibliography label
+% ----------------------------
+\DeclareLabeldate{%
+	\field{year}
+	\field{date}
+	\field{eventdate}
+	\field{urldate}
+	\literal{nodate}
+}
+
+% ----------------------------
+% Names + YEAR — no space between year digits and extradate letter
+% Produces (2026a) not (2026 a)
+% ----------------------------
+\newbibmacro*{name+year}{%
+	\usebibmacro{author/editor+others/translator+others}%
+	\setunit{\addspace}%
+	\printtext[parens]{%
+		\iffieldundef{year}
+		{\printdateextra}
+		{\printfield{year}\printfield{extradate}}%
+	}%
+	\newunit\newblock
+}
+
+% ----------------------------
+% Full publication date — day month year
+% ----------------------------
+\newbibmacro*{fulldate}{%
+	\iffieldundef{date}{}{\printdate}%
+}
+
+% ----------------------------
+% Possessive cite: Author's (Year)  /  Author's (Year: page)
+% ----------------------------
+\DeclareCiteCommand{\posscite}
+{\usebibmacro{prenote}}
+{\printnames{labelname}%
+	\printtext{\textquoteright s}%
+	\setunit*{\addspace}%
+	\printtext[parens]{%
+		\printfield{year}\printfield{extradate}%
+		\iffieldundef{postnote}{}{\addcolon\space\printfield{postnote}}%
+}}
+{\multicitedelim}
+{}
+
+% ----------------------------
+% URL + accessed date
+% Target: URL (accessed 24 February 2026)
+% ----------------------------
+\renewbibmacro*{url+urldate}{%
+	\printfield{url}%
+	\iffieldundef{urlyear}
+	{}
+	{\setunit{\addspace}%
+		\printtext[parens]{%
+			accessed\space
+			\iffieldundef{urlday}{}{\printfield{urlday}\space}%
+			\iffieldundef{urlmonth}{}{\mkbibmonth{\thefield{urlmonth}}\space}%
+			\printfield{urlyear}}}%
+}
+
+% ----------------------------
+% Title formats
+% Book/thesis/report/manual: italic
+% Article/chapter/inproceedings: plain
+% Online/misc/report/periodical: italic
+% ----------------------------
+\DeclareFieldFormat[article,inbook,incollection,inproceedings]{title}{#1}
+\DeclareFieldFormat[book,collection,proceedings,thesis,unpublished]{title}{\mkbibemph{#1}}
+\DeclareFieldFormat[online,misc,report,manual,techreport,periodical]{title}{\mkbibemph{#1}}
+
+% ----------------------------
+% Pages: no pp. prefix — Maynooth journal examples show plain ranges
+% ----------------------------
+\DeclareFieldFormat{pages}{#1}
+
+% ============================
+% ARTICLE
+% Target: Author (Year) Title. Journal, vol(no), pages. [online]. Available at: URL (accessed date).
+% ============================
+\DeclareBibliographyDriver{article}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\newunit\newblock
+	\mkbibemph{\printfield{journaltitle}}%
+	\iffieldundef{volume}{}{\addcomma\space\printfield{volume}}%
+	\iffieldundef{number}{}{\space(\printfield{number})}%
+	\iffieldundef{pages}{}{\addcomma\space\printfield{pages}}%
+	\iffieldundef{url}{}{%
+		\addperiod\space [online].\space Available at:\space\usebibmacro{url+urldate}%
+	}%
+	\usebibmacro{finentry}%
+}
+
+% ============================
+% BOOK
+% Target: Author (Year) Title. Place: Publisher.
+% ============================
+\DeclareBibliographyDriver{book}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\newunit\newblock
+	\printlist{location}%
+	\addcolon\space
+	\printlist{publisher}%
+	\iffieldundef{url}{}{%
+		\addperiod\space [online].\space Available at:\space\usebibmacro{url+urldate}%
+	}%
+	\usebibmacro{finentry}%
+}
+
+% ============================
+% INCOLLECTION
+% Target: Author (Year) Chapter title. In: Editor, ed. Book Title. Place: Publisher. pages.
+% ============================
+\DeclareBibliographyDriver{incollection}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\addperiod\space In:\space
+	\ifnameundef{editor}{}{%
+		\printnames{editor}\addcomma\space
+		\ifnumgreater{\value{editor}}{1}{eds}{ed}%
+		\addperiod\space
+	}%
+	\mkbibemph{\printfield{booktitle}}%
+	\newunit\newblock
+	\printlist{location}%
+	\addcolon\space
+	\printlist{publisher}%
+	\iffieldundef{pages}{}{\addperiod\space\printfield{pages}}%
+	\usebibmacro{finentry}%
+}
+
+\DeclareBibliographyAlias{inbook}{incollection}
+
+% ============================
+% INPROCEEDINGS
+% Target: Author (Year) Title. In: Proceedings title. pages.
+% ============================
+\DeclareBibliographyDriver{inproceedings}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\addperiod\space In:\space
+	\mkbibemph{\printfield{booktitle}}%
+	\iffieldundef{volume}{}{\addcomma\space\printfield{volume}}%
+	\iffieldundef{number}{}{\space(\printfield{number})}%
+	\iffieldundef{pages}{}{\addperiod\space\printfield{pages}}%
+	\iffieldundef{url}{}{%
+		\addperiod\space [online].\space Available at:\space\usebibmacro{url+urldate}%
+	}%
+	\usebibmacro{finentry}%
+}
+
+% ============================
+% REPORT
+% Target: Author (Year) Title. Place: Publisher/Institution. [online]. Available at: URL.
+% Checks publisher first, falls back to institution.
+% This fixes the "Canberra: [online]" defect where publisher was present
+% but the old driver only checked institution.
+% ============================
+\DeclareBibliographyDriver{report}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\newunit\newblock
+	\iflistundef{location}{}{%
+		\printlist{location}\addcolon\space
+	}%
+	\iflistundef{publisher}
+	{\printlist{institution}}
+	{\printlist{publisher}}%
+	\iffieldundef{url}{}{%
+		\addperiod\space [online].\space Available at:\space\usebibmacro{url+urldate}%
+	}%
+	\usebibmacro{finentry}%
+}
+
+\DeclareBibliographyAlias{techreport}{report}
+\DeclareBibliographyAlias{manual}{report}
+
+% ============================
+% THESIS
+% Target: Author (Year) Title. Unpublished [type], Institution.
+% ============================
+\DeclareBibliographyDriver{thesis}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\addperiod\space Unpublished\space
+	\printfield{type}%
+	\addcomma\space
+	\printlist{institution}%
+	\iffieldundef{url}{}{%
+		\addperiod\space [online].\space Available at:\space\usebibmacro{url+urldate}%
+	}%
+	\usebibmacro{finentry}%
+}
+
+% ============================
+% ONLINE
+% Target: Author (Year) Title [online]. Available at: URL (accessed date).
+% FIX: robust spacing before [online].
+% ============================
+\DeclareBibliographyDriver{online}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\addspace
+	\printtext[brackets]{online}%
+	\addperiod\space
+	\iffieldundef{organization}{}{\printlist{organization}\addperiod\space}%
+	\iffieldundef{institution}{}{\printlist{institution}\addperiod\space}%
+	\iffieldundef{location}{}{\printlist{location}\addperiod\space}%
+	Available at:\space\usebibmacro{url+urldate}%
+	\usebibmacro{finentry}%
+}
+
+% ============================
+% PERIODICAL
+% Title leads. note field carries issue details.
+% ============================
+\DeclareBibliographyDriver{periodical}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\ [online].\space
+	\iffieldundef{note}{}{\printfield{note}\addperiod\space}%
+	\iffieldundef{institution}{}{\printlist{institution}\addperiod\space}%
+	\iffieldundef{location}{}{\printlist{location}\addperiod\space}%
+	Available at:\space\usebibmacro{url+urldate}%
+	\usebibmacro{finentry}%
+}
+
+% ============================
+% MISC
+% Covers interviews, private documents, speeches, blog posts.
+% FIX: note field now prints unconditionally for non-blog entries —
+% this makes Ukrainian Lessons Learned SOF entries render correctly.
+% ============================
+\DeclareBibliographyDriver{misc}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\ifboolexpr{ test {\iffieldequalstr{entrysubtype}{blog}} }
+	{%
+		\printfield{title}%
+		\iffieldundef{booktitle}{}{%
+			\addcomma\space\mkbibemph{\printfield{booktitle}}%
+		}%
+		\addperiod\space [online].\space
+		\usebibmacro{fulldate}\addperiod\space
+		Available at:\space\usebibmacro{url+urldate}%
+	}
+	{%
+		\printfield{title}%
+		\iffieldundef{note}{}{\addperiod\space\printfield{note}}%
+		\iffieldundef{howpublished}{}{\addperiod\space\printfield{howpublished}}%
+		\iffieldundef{location}{}{\addperiod\space\printlist{location}}%
+		\iffieldundef{organization}{}{\addperiod\space\printlist{organization}}%
+		\iffieldundef{institution}{}{\addperiod\space\printlist{institution}}%
+		\iffieldundef{url}{}{%
+			\addperiod\space [online].\space Available at:\space\usebibmacro{url+urldate}%
+		}%
+	}%
+	\usebibmacro{finentry}%
+}
+
+% ============================
+% UNPUBLISHED
+% Lectures, internal documents.
+% ============================
+\DeclareBibliographyDriver{unpublished}{%
+	\usebibmacro{begentry}%
+	\usebibmacro{name+year}%
+	\printfield{title}%
+	\iffieldundef{type}{}{\addperiod\space[\printfield{type}]}%
+	\iffieldundef{institution}{}{\addperiod\space\printlist{institution}}%
+	\iffieldundef{location}{}{\addcomma\space\printlist{location}}%
+	\usebibmacro{finentry}%
+}
+
+% ============================
+% CASE
+% Legal cases — OSCOLA-lite: Title (Year). Court. ECLI.
+% ============================
+\DeclareBibliographyDriver{case}{%
+	\usebibmacro{begentry}%
+	\printfield{title}%
+	\addspace(\printfield{year})\addperiod\space
+	\iffieldundef{court}{}{\printfield{court}\addperiod\space}%
+	\iffieldundef{ecli}{}{ECLI:\space\printfield{ecli}\addperiod\space}%
+	\iffieldundef{url}{}{%
+		[online].\space Available at:\space\usebibmacro{url+urldate}%
+	}%
+	\usebibmacro{finentry}%
+}

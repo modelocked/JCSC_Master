@@ -1,0 +1,221 @@
+\documentclass[12pt,a4paper]{scrbook}
+
+\makeatletter
+\renewcommand{\cleardoublepage}{\clearpage}
+\makeatother
+
+% ----------------------------------
+% Import LaTeX packages
+% ----------------------------------
+
+% Harvard-style
+\usepackage[
+style=authoryear,
+backend=biber,
+giveninits=true,
+uniquename=init,
+uniquelist=false,
+maxcitenames=2,
+maxbibnames=99,
+date=year,
+labeldateparts=true,
+url=true,
+doi=false,
+isbn=false
+]{biblatex}
+
+
+\usepackage{setspace}         % Controls line spacing (set in your style file)
+\usepackage{csquotes}         % Correct quotation formatting (needed by biblatex)
+\usepackage[left=40mm,right=20mm,top=25mm,bottom=25mm]{geometry} % Maynooth margins
+\usepackage[normalem]{ulem}   % Underlining (for url formatting)
+\usepackage{xurl}             % Better URL line breaking
+
+\usepackage{graphicx}
+\usepackage{xparse}
+\usepackage{ulem}
+\usepackage{nth}
+\usepackage{booktabs}     % Tables
+\usepackage{amssymb}      % Checkmarks
+\usepackage{float}        % Table placement
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{rotating}
+\usepackage{chngcntr}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{eurosym}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{cancel}
+\usepackage{epigraph}
+\usepackage{soul}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{ltablex}
+\keepXColumns
+
+
+%Index
+\usepackage{imakeidx}     % better than plain makeidx; works with hyperref
+\makeindex[columns=2, title=Index, intoc]  % columns/title + add to ToC
+
+%Ensure footnotes, figure and table counts are global
+% Keep footnotes global, but number figures and tables by chapter
+%\counterwithout{figure}{chapter}
+%\counterwithout{table}{chapter}
+\counterwithout{footnote}{chapter}
+
+
+
+% ---------------------------------
+% Load the styles
+% ----------------------------------
+\input{Style_Formatting/Document_Formatting/Document_Formatting.tex} % Document formatting style
+\input{Style_Formatting/Referencing_Formatting/Referencing_Formatting.tex} % Maynooth variant of Harvard Referencing Style
+
+
+\definecolor{linkborder}{RGB}{90,90,90}
+\definecolor{urlblue}{RGB}{0,0,120}
+
+\usepackage[
+colorlinks=false,
+pdfborder={0 0 0.5},
+pdfborderstyle={/S/U/W 0.5},
+linkbordercolor=linkborder,
+citebordercolor={1 1 1},
+urlbordercolor=urlblue,
+breaklinks=true
+]{hyperref}
+
+% Glossaries (load AFTER hyperref)
+\usepackage[acronym,nonumberlist,toc]{glossaries}
+\makeglossaries
+
+\setglossarysection{chapter}  % make lists use chapter-level headings
+
+
+
+%-----------------------------------
+%abstract
+\newenvironment{abstract}{
+	\cleardoublepage
+	\thispagestyle{plain}
+	\null\vfill
+	\begin{center}
+		\bfseries Abstract
+	\end{center}
+}{
+	\vfill\null
+}
+
+%Date formatting
+\renewcommand{\today}{\number\day\space
+	\ifcase\month
+	\or January\or February\or March\or April\or May\or June
+	\or July\or August\or September\or October\or November\or December
+	\fi
+	\space\number\year}
+%-----------------------------------
+
+% ----------------------------------
+% Bibliography resource
+% ----------------------------------
+\addbibresource{../../Master_Sources/AB03_JCSC_bibliography_2025_2026.bib}
+
+
+
+% ----------------------------------
+% Glossary/Acronym DEFINITIONS (definitions only; no printing here)
+% ----------------------------------
+\input{Frontmatter_Backmatter/Glossary}
+
+
+\begin{document}
+	
+	% ----------------------------------
+	% Frontmatter
+
+	%TC:ignore
+	\frontmatter
+	\input{Frontmatter_Backmatter/Metadata}
+	\input{Frontmatter_Backmatter/Titlepage}
+	\input{Frontmatter_Backmatter/Declaration}
+	\include{chapters/Acknowledgements}
+	\include{chapters/abstract}
+	 
+	\cleardoublepage
+	
+	% ----------------------------------
+	%Table of contents
+	\tableofcontents
+	\setcounter{tocdepth}{2}   % sections+subsections (0=chapters only, 1=sections, 2=subsections)
+	\renewcommand{\contentsname}{Contents}   % ToC heading text (default is fine)
+	\section*{Word count} 15,272 words.
+
+	\phantomsection
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\begingroup
+	\renewcommand*{\addvspace}[1]{}
+	\listoffigures
+	\endgroup
+	
+	\phantomsection
+	\addcontentsline{toc}{chapter}{List of Tables}
+	\begingroup
+	\renewcommand*{\addvspace}[1]{}
+	\listoftables
+	\endgroup
+
+
+	% ----------------------------------
+	%include hte acronyms before the mainbody
+	\glsaddall[types=main]
+	\glsaddall[types=\acronymtype]
+	\printglossary[type=\acronymtype, title=List of Acronyms] % acronyms from 
+
+	\mainmatter  
+		
+	%\cleardoublepage
+	\include{chapters/Introduction} 
+
+	%Chapters
+	\include{chapters/Chapter_1}
+	\include{chapters/Chapter_2}
+	\include{chapters/Chapter_3}
+	
+	\cleardoublepage
+	\include{chapters/Conclusion}
+	
+	% ----------------------------------
+	% End matter (Annexes, Bibliography glossary, index etc.,)
+	% ----------------------------------
+
+
+	% Bibliography
+	\addchap{Reference List}	
+	%TC:ignore
+	\printbibliography[
+	heading=none,
+	title={},
+	sorting=nyt
+ 	]
+
+	\cleardoublepage
+	\include{chapters/annex_links}
+
+
+	\backmatter
+	
+	\glsaddall[types=main]
+	\glsaddall[types=\acronymtype]
+	
+	\input{Frontmatter_Backmatter/Glossary_Print}
+	\printindex
+	
+
+\end{document}
