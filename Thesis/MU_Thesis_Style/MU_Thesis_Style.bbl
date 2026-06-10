@@ -1,0 +1,486 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{DPR_2024}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3706d8b1afe164fbc8f68add6be5044c}{%
+           family={{Department of Defence and Defence Forces}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Department of Defence and Defence Forces}%
+      }
+      \list{location}{1}{%
+        {Newbridge}%
+      }
+      \strng{namehash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{fullhash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{fullhashraw}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{bibnamehash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{authorbibnamehash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{authornamehash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{authorfullhash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{authorfullhashraw}{3706d8b1afe164fbc8f68add6be5044c}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Defence policy review 2024: Adjusting and affirming our defence policy in an era of change}
+      \field{type}{Policy review}
+      \field{urlday}{10}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://assets.gov.ie/static/documents/defence-policy-review-2024.pdf
+      \endverb
+      \verb{url}
+      \verb https://assets.gov.ie/static/documents/defence-policy-review-2024.pdf
+      \endverb
+    \endentry
+    \entry{Hall_2021_camouflage_platform}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=e80179d7a24f1af28709ce7a54306bed}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dc7e4b53fe5af3e446391889cac8caa2}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72cfd0ecd112d012df00cca87ef88cfc}{%
+           family={Volonakis},
+           familyi={V\bibinitperiod},
+           given={T.\bibnamedelimi N.},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c33d0990224716e101c4c606f43d32cf}{%
+           family={Liggins},
+           familyi={L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bc548cce668fd5170eecc516a5d8f1e}{%
+           family={Lymer},
+           familyi={L\bibinitperiod},
+           given={K.\bibnamedelimi P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db5214399bf321cc1f48c93833d59a0c}{%
+           family={Baddeley},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa6e4091fdf854b1d6175c2bc8dfd67f}{%
+           family={Cuthill},
+           familyi={C\bibinitperiod},
+           given={I.\bibnamedelimi C.},
+           giveni={I\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c75196717c06a6cbf4037d3a5d45084}{%
+           family={Scott-Samuel},
+           familyi={S\bibinithyphendelim S\bibinitperiod},
+           given={N.\bibnamedelimi E.},
+           giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e9acdce5d7c38ffc103195137d7900bd}
+      \strng{fullhash}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{fullhashraw}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{bibnamehash}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{authorbibnamehash}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{authornamehash}{e9acdce5d7c38ffc103195137d7900bd}
+      \strng{authorfullhash}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{authorfullhashraw}{84358aedefdeb183937b113e6d2d1a32}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Defence Technology}
+      \field{number}{6}
+      \field{title}{A platform for initial testing of multiple camouflage patterns}
+      \field{volume}{17}
+      \field{year}{2021}
+      \field{pages}{1833\bibrangedash 1839}
+      \range{pages}{7}
+    \endentry
+    \entry{tollast_2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c9f36d814b240cca30d7c959cb9a7ae6}{%
+           family={Tollast},
+           familyi={T\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{fullhash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{fullhashraw}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{bibnamehash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{authorbibnamehash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{authornamehash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{authorfullhash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{authorfullhashraw}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{entrysubtype}{video}
+      \field{month}{11}
+      \field{note}{The Trump Report}
+      \field{title}{Putin's new problem: Ukraine `excels' in scaling up drones}
+      \field{type}{video online}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=mYsoZqdzeFI
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=mYsoZqdzeFI
+      \endverb
+    \endentry
+    \entry{watling_2023}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cdb0abb9b6d02ffdee50475fc54dcf51}{%
+           family={Watling},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Bloomsbury Academic}%
+      }
+      \strng{namehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{fullhash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{fullhashraw}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{bibnamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorbibnamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authornamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorfullhash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorfullhashraw}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781350352957}
+      \field{title}{The arms of the future: Technology and close combat in the twenty-first century}
+      \field{year}{2023}
+    \endentry
+    \entry{watling_2025_panel}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cdb0abb9b6d02ffdee50475fc54dcf51}{%
+           family={Watling},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{fullhash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{fullhashraw}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{bibnamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorbibnamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authornamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorfullhash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorfullhashraw}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{entrysubtype}{video}
+      \field{month}{10}
+      \field{note}{Panel discussion moderated by Dearnley, F.}
+      \field{title}{This is how the Ukraine war ends (Panel discussion)}
+      \field{type}{video online}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=91lukcucQp8
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=91lukcucQp8
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{Hall_2021_camouflage_platform}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=e80179d7a24f1af28709ce7a54306bed}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dc7e4b53fe5af3e446391889cac8caa2}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72cfd0ecd112d012df00cca87ef88cfc}{%
+           family={Volonakis},
+           familyi={V\bibinitperiod},
+           given={T.\bibnamedelimi N.},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c33d0990224716e101c4c606f43d32cf}{%
+           family={Liggins},
+           familyi={L\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bc548cce668fd5170eecc516a5d8f1e}{%
+           family={Lymer},
+           familyi={L\bibinitperiod},
+           given={K.\bibnamedelimi P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db5214399bf321cc1f48c93833d59a0c}{%
+           family={Baddeley},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa6e4091fdf854b1d6175c2bc8dfd67f}{%
+           family={Cuthill},
+           familyi={C\bibinitperiod},
+           given={I.\bibnamedelimi C.},
+           giveni={I\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c75196717c06a6cbf4037d3a5d45084}{%
+           family={Scott-Samuel},
+           familyi={S\bibinithyphendelim S\bibinitperiod},
+           given={N.\bibnamedelimi E.},
+           giveni={N\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e9acdce5d7c38ffc103195137d7900bd}
+      \strng{fullhash}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{fullhashraw}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{bibnamehash}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{authorbibnamehash}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{authornamehash}{e9acdce5d7c38ffc103195137d7900bd}
+      \strng{authorfullhash}{84358aedefdeb183937b113e6d2d1a32}
+      \strng{authorfullhashraw}{84358aedefdeb183937b113e6d2d1a32}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Defence Technology}
+      \field{number}{6}
+      \field{title}{A platform for initial testing of multiple camouflage patterns}
+      \field{volume}{17}
+      \field{year}{2021}
+      \field{pages}{1833\bibrangedash 1839}
+      \range{pages}{7}
+    \endentry
+    \entry{watling_2023}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cdb0abb9b6d02ffdee50475fc54dcf51}{%
+           family={Watling},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Bloomsbury Academic}%
+      }
+      \strng{namehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{fullhash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{fullhashraw}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{bibnamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorbibnamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authornamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorfullhash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorfullhashraw}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781350352957}
+      \field{title}{The arms of the future: Technology and close combat in the twenty-first century}
+      \field{year}{2023}
+    \endentry
+    \entry{DPR_2024}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3706d8b1afe164fbc8f68add6be5044c}{%
+           family={{Department of Defence and Defence Forces}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Department of Defence and Defence Forces}%
+      }
+      \list{location}{1}{%
+        {Newbridge}%
+      }
+      \strng{namehash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{fullhash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{fullhashraw}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{bibnamehash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{authorbibnamehash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{authornamehash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{authorfullhash}{3706d8b1afe164fbc8f68add6be5044c}
+      \strng{authorfullhashraw}{3706d8b1afe164fbc8f68add6be5044c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Defence policy review 2024: Adjusting and affirming our defence policy in an era of change}
+      \field{type}{Policy review}
+      \field{urlday}{10}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://assets.gov.ie/static/documents/defence-policy-review-2024.pdf
+      \endverb
+      \verb{url}
+      \verb https://assets.gov.ie/static/documents/defence-policy-review-2024.pdf
+      \endverb
+    \endentry
+    \entry{tollast_2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c9f36d814b240cca30d7c959cb9a7ae6}{%
+           family={Tollast},
+           familyi={T\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{fullhash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{fullhashraw}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{bibnamehash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{authorbibnamehash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{authornamehash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{authorfullhash}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \strng{authorfullhashraw}{c9f36d814b240cca30d7c959cb9a7ae6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{18}
+      \field{entrysubtype}{video}
+      \field{month}{11}
+      \field{note}{The Trump Report}
+      \field{title}{Putin's new problem: Ukraine `excels' in scaling up drones}
+      \field{type}{video online}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=mYsoZqdzeFI
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=mYsoZqdzeFI
+      \endverb
+    \endentry
+    \entry{watling_2025_panel}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cdb0abb9b6d02ffdee50475fc54dcf51}{%
+           family={Watling},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{fullhash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{fullhashraw}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{bibnamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorbibnamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authornamehash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorfullhash}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \strng{authorfullhashraw}{cdb0abb9b6d02ffdee50475fc54dcf51}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{29}
+      \field{entrysubtype}{video}
+      \field{month}{10}
+      \field{note}{Panel discussion moderated by Dearnley, F.}
+      \field{title}{This is how the Ukraine war ends (Panel discussion)}
+      \field{type}{video online}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=91lukcucQp8
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=91lukcucQp8
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{DORD_2022}
+\endrefsection
+\endinput
+

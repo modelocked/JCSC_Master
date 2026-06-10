@@ -1,0 +1,21 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'MU_Thesis_Style.blg'
+[103] biber-MSWIN64:342> INFO - === 
+[135] Biber.pm:421> INFO - Reading 'MU_Thesis_Style.bcf'
+[229] Biber.pm:1002> INFO - Found 6 citekeys in bib section 0
+[248] Biber.pm:4487> INFO - Processing section 0
+[259] Biber.pm:4678> INFO - Looking for bibtex file 'Bibliography_Master.bib' for section 0
+[313] bibtex.pm:1713> INFO - LaTeX decoding ...
+[341] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliography_Master.bib'
+[416] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[416] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[416] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[416] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[430] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[430] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[430] Biber.pm:4307> INFO - Sorting list 'ynt/global//global/global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[431] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[441] bbl.pm:676> INFO - Writing 'MU_Thesis_Style.bbl' with encoding 'UTF-8'
+[450] bbl.pm:779> INFO - Output to MU_Thesis_Style.bbl
+[450] Biber.pm:132> WARN - I didn't find a database entry for 'DORD_2022' (section 0)
+[451] Biber.pm:134> INFO - WARNINGS: 1

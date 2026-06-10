@@ -1,0 +1,16 @@
+\contentsline {chapter}{Student Declaration}{ii}{Doc-Start}%
+\contentsline {chapter}{Acknowledgements}{iii}{chapter*.1}%
+\contentsline {chapter}{Abstract}{iv}{section*.2}%
+\contentsline {chapter}{List of Figures}{vi}{section*.4}%
+\contentsline {chapter}{List of Tables}{vii}{section*.6}%
+\contentsline {chapter}{List of Acronyms}{viii}{section*.8}%
+\contentsline {chapter}{\nonumberline Introduction --- this is what the table of contents prints}{1}{chapter*.10}%
+\contentsline {section}{\nonumberline Some notes}{1}{section*.12}%
+\contentsline {chapter}{\numberline {1}Chapter title in the TOC}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Numbered Section: Sample body with common functions used}{2}{section.1.1}%
+\contentsline {chapter}{\nonumberline Conclusion}{5}{chapter*.16}%
+\contentsline {chapter}{\nonumberline Reference List}{6}{chapter*.17}%
+\contentsline {chapter}{Annex}{7}{chapter*.18}%
+\contentsline {chapter}{Glossary of Terms}{10}{section*.20}%
+\contentsline {chapter}{Index}{11}{section*.22}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -4,6 +4,8 @@
 % Clean version: XeLaTeX/LuaLaTeX required, no BibLaTeX conflicts
 % =====================================================================
 
+
+
 % -------------------------------------------------
 % Enforce XeLaTeX or LuaLaTeX (required for Times New Roman)
 \RequirePackage{iftex}
@@ -15,20 +17,21 @@
 \fi
 
 % -------------------------------------------------
-% Fonts: Times New Roman 12pt with Arial and Courier New
+% Fonts: Times New Roman 12pt throughout
 \RequirePackage{fontspec}
-\setmainfont{Times New Roman} % Main text
-\setsansfont{Arial}            % Sans serif
-\setmonofont{Courier New}      % Monospace
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}
+\setmonofont{Courier New}
 
 % -------------------------------------------------
 % Page layout: margins 40mm left, 20mm right, 25mm top/bottom
 \RequirePackage[left=40mm,right=20mm,top=25mm,bottom=25mm]{geometry}
 
+
 % -------------------------------------------------
-% Line spacing: double throughout; single for abstract
+% Line spacing: double throughout; single spacing for abstract
 \RequirePackage{setspace}
-\doublespacing
+\setstretch{2.0}
 \newenvironment{thesisabstract}
 {\begin{singlespace}\begin{abstract}}
 		{\end{abstract}\end{singlespace}}
@@ -46,16 +49,30 @@
 
 % -------------------------------------------------
 % Headings (KOMA-Script native, no titlesec)
+% -------------------------------------------------
+% Headings (KOMA-Script native, no titlesec)
 \RequirePackage{scrlayer-scrpage}
 \RequirePackage{etoolbox}
+
+% -------------------------------------------------
+% Page numbers centred at bottom of every page
+\clearpairofpagestyles
+\cfoot*{\pagemark}
+\pagestyle{scrheadings}
 
 % Centre chapter headings
 \renewcommand*\raggedchapter{\centering}
 
-% Heading fonts
+
+% Heading and list fonts: Times/roman, not sans-serif
+\setkomafont{disposition}{\normalfont}
 \setkomafont{chapter}{\normalfont\LARGE\bfseries}
 \setkomafont{section}{\normalfont\Large\bfseries}
 \setkomafont{subsection}{\normalfont\itshape\normalsize}
+\setkomafont{chapterentry}{\normalfont\bfseries}
+\setkomafont{descriptionlabel}{\normalfont\bfseries}
+\setkomafont{pageheadfoot}{\normalfont}
+\setkomafont{pagenumber}{\normalfont}
 
 % Spacing before/after headings
 \RedeclareSectionCommand[
@@ -104,8 +121,10 @@ afterskip=1.0ex plus .2ex]{subsection}
 \sloppy
 
 % -------------------------------------------------
+% -------------------------------------------------
 % Header/Footer height adjustments (silences warnings)
 \setlength{\headheight}{25pt}
+\setlength{\footheight}{24pt}
 \setlength{\footskip}{30pt}
 
 % =====================================================================

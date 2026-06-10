@@ -1,0 +1,260 @@
+% Maynooth Harvard / biblatex master templates for Bibliography_Master.bib
+% Use one model per BibLaTeX entry type present in the working .bib, plus a YouTube/video-online model.
+% Keep author/editor names as Surname, Initial(s). Corporate authors must stay in double braces.
+% Keep title fields in sentence case, protecting required capitals with braces: {Ireland}, {NATO}, {FPV}.
+% Use date where available; year is retained for robustness with the current style file.
+% Use urldate for every online source and report with a URL.
+
+@article{MASTER_article_journal,
+  author       = {Surname, A. B. and Surname, C. D.},
+  title        = {Title of journal article in sentence case with {Protected Capitals}},
+  journaltitle = {Journal Title in Title Case},
+  year         = {2026},
+  date         = {2026},
+  volume       = {12},
+  number       = {3},
+  pages        = {45--67},
+  doi          = {10.0000/example.doi}
+}
+
+@article{MASTER_article_online,
+  author       = {Surname, A. B. and Surname, C. D.},
+  title        = {Title of online journal article in sentence case with {Protected Capitals}},
+  journaltitle = {Journal Title in Title Case},
+  year         = {2026},
+  date         = {2026},
+  volume       = {12},
+  number       = {3},
+  pages        = {45--67},
+  url          = {https://example.org/article},
+  urldate      = {2026-06-06},
+  note         = {Open Access}
+}
+
+@book{MASTER_book,
+  author    = {Surname, A. B.},
+  title     = {Title of book: Subtitle in sentence case},
+  year      = {2026},
+  date      = {2026},
+  edition   = {2},
+  location  = {London},
+  publisher = {Publisher Name}
+}
+
+@book{MASTER_edited_book,
+  editor    = {Surname, A. B. and Surname, C. D.},
+  title     = {Title of edited book in sentence case},
+  year      = {2026},
+  date      = {2026},
+  location  = {Oxford},
+  publisher = {Publisher Name}
+}
+
+@incollection{MASTER_incollection_chapter,
+  author    = {Surname, A. B.},
+  title     = {Title of chapter in sentence case},
+  booktitle = {Title of edited book in sentence case},
+  editor    = {Editor, C. D. and Editor, E. F.},
+  year      = {2026},
+  date      = {2026},
+  location  = {Cambridge},
+  publisher = {Publisher Name},
+  pages     = {22--41}
+}
+
+@inbook{MASTER_inbook_section,
+  author    = {Surname, A. B.},
+  title     = {Title of book section in sentence case},
+  booktitle = {Title of book in sentence case},
+  year      = {2026},
+  date      = {2026},
+  location  = {Oxford},
+  publisher = {Publisher Name},
+  pages     = {706--720}
+}
+
+@inproceedings{MASTER_inproceedings_published,
+  author    = {Surname, A. B.},
+  title     = {Title of conference paper in sentence case},
+  booktitle = {Title of Conference Proceedings},
+  year      = {2026},
+  date      = {2026},
+  location  = {Dublin},
+  publisher = {Publisher Name},
+  pages     = {121--128},
+  url       = {https://example.org/conference-paper},
+  urldate   = {2026-06-06}
+}
+
+@report{MASTER_report_government_policy,
+  author      = {{Government Department or Corporate Author}},
+  title       = {Title of report or policy document in sentence case},
+  year        = {2026},
+  date        = {2026-06-01},
+  type        = {Policy document},
+  number      = {Report number if applicable},
+  institution = {{Issuing Institution}},
+  location    = {Dublin},
+  url         = {https://example.gov.ie/report.pdf},
+  urldate     = {2026-06-06}
+}
+
+@techreport{MASTER_techreport_working_paper,
+  author      = {Surname, A. B. and Surname, C. D.},
+  title       = {Title of technical report or working paper in sentence case},
+  year        = {2026},
+  date        = {2026},
+  type        = {Working Paper},
+  series      = {Working Paper Series Name},
+  number      = {6024},
+  institution = {Institution Name},
+  location    = {Cambridge, MA},
+  doi         = {10.0000/example}
+}
+
+@manual{MASTER_manual_doctrine,
+  author      = {{Issuing Organisation}},
+  title       = {Title of manual, doctrine or handbook in sentence case},
+  year        = {2026},
+  date        = {2026},
+  institution = {{Issuing Organisation}},
+  location    = {Place of Publication},
+  url         = {https://example.mil/manual.pdf},
+  urldate     = {2026-06-06}
+}
+
+@thesis{MASTER_thesis,
+  author      = {Surname, A. B.},
+  title       = {Title of thesis in sentence case},
+  year        = {2026},
+  date        = {2026},
+  type        = {MA thesis},
+  institution = {{Maynooth University}},
+  location    = {Maynooth},
+  url         = {https://example.org/thesis},
+  urldate     = {2026-06-06}
+}
+
+@online{MASTER_online_website,
+  author  = {{Responsible Organisation or Surname, Initials}},
+  title   = {Title of webpage in sentence case},
+  year    = {2026},
+  date    = {2026-06-01},
+  url     = {https://example.org/webpage},
+  urldate = {2026-06-06}
+}
+
+@online{MASTER_youtube_video,
+  author  = {{Screen Name of Contributor}},
+  title   = {Title of video or lecture in sentence case},
+  year    = {2026},
+  date    = {2026-06-01},
+  type    = {video online},
+  url     = {https://www.youtube.com/watch?v=example},
+  urldate = {2026-06-06},
+  note    = {YouTube}
+}
+
+@misc{MASTER_misc_act_or_legal_document,
+  author      = {{Government of Ireland}},
+  title       = {Title of Act 2026},
+  year        = {2026},
+  date        = {2026-06-01},
+  type        = {Act},
+  number      = {No. 1 of 2026},
+  institution = {{Government of Ireland}},
+  location    = {Dublin},
+  url         = {https://www.irishstatutebook.ie/example},
+  urldate     = {2026-06-06},
+  note        = {Enacted Act}
+}
+
+@case{MASTER_case,
+  title       = {Case C-000/00, Party v Party},
+  year        = {2026},
+  date        = {2026-06-01},
+  number      = {C-000/00},
+  court       = {{Court of Justice of the European Union}},
+  institution = {{Court of Justice of the European Union}},
+  location    = {Luxembourg},
+  note        = {Judgment},
+  url         = {https://example.eu/legal-case},
+  urldate     = {2026-06-06}
+}
+
+@unpublished{MASTER_unpublished_lecture,
+  author      = {Surname, A. B.},
+  title       = {Title or description of lecture, internal document or unpublished paper},
+  year        = {2026},
+  date        = {2026-06-01},
+  type        = {Lecture},
+  institution = {{Maynooth University}},
+  location    = {JCSC lecture hall}
+}
+
+@periodical{MASTER_periodical_issue,
+  title       = {Title of Periodical},
+  year        = {2026},
+  date        = {2026-06},
+  institution = {{Issuing Organisation}},
+  location    = {Dublin},
+  note        = {June 2026 issue},
+  url         = {https://example.org/periodical-issue},
+  urldate     = {2026-06-06}
+}
+
+@Report{DPR_2024,
+author = {{Department of Defence and Defence Forces}},
+title = {Defence policy review 2024: Adjusting and affirming our defence policy in an era of change},
+year = {2024},
+type = {Policy review},
+institution = {{Department of Defence and Defence Forces}},
+url   = {https://assets.gov.ie/static/documents/defence-policy-review-2024.pdf},
+urldate = {2026-01-10},
+location = {Newbridge}
+} 
+
+
+@online{watling_2025_panel,
+author  = {Watling, J.},
+title   = {This is how the Ukraine war ends (Panel discussion)},
+note      = {Panel discussion moderated by Dearnley, F.},
+year    = {2025},
+date = {2025-10-29},
+type = {video online},url     = {https://www.youtube.com/watch?v=91lukcucQp8},
+urldate = {2026-03-08},
+entrysubtype = {video},
+}
+
+@book{watling_2023,
+  author    = {Watling, J.},
+  title     = {The arms of the future: Technology and close combat in the twenty-first century},
+  publisher = {Bloomsbury Academic},
+  year      = {2023},
+  isbn      = {9781350352957},
+}
+
+
+@article{Hall_2021_camouflage_platform,
+author = {Hall, J. R. and Matthews, O. and Volonakis, T. N. and Liggins, E. and Lymer, K. P. and Baddeley, R. and Cuthill, I. C. and Scott-Samuel, N. E.},
+title = {A platform for initial testing of multiple camouflage patterns},
+journal = {Defence Technology},
+year = {2021},
+volume = {17},
+number = {6},
+pages = {1833--1839},
+}
+
+
+
+@online{tollast_2025,
+author  = {Tollast, R.},
+title   = {Putin's new problem: Ukraine `excels' in scaling up drones},
+note      = {The Trump Report},
+year    = {2025},
+date = {2025-11-18},
+type = {video online},url     = {https://www.youtube.com/watch?v=mYsoZqdzeFI},
+urldate = {2026-03-08},
+entrysubtype = {video},
+}
+

@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{scrbook}
+\documentclass[fontsize=12pt,a4paper]{scrbook}
 
 \makeatletter
 \renewcommand{\cleardoublepage}{\clearpage}
@@ -58,6 +58,15 @@ isbn=false
 \usepackage{longtable}
 \usepackage{ltablex}
 \keepXColumns
+
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{arrows.meta}
+\definecolor{amber}{HTML}{BA7517}
+\definecolor{amberfill}{HTML}{EF9F27}
+\definecolor{coral}{HTML}{D85A30}
+\definecolor{ink}{HTML}{444441}
 
 
 %Index
@@ -125,7 +134,7 @@ breaklinks=true
 % ----------------------------------
 % Bibliography resource
 % ----------------------------------
-\addbibresource{../../Master_Sources/AB03_JCSC_bibliography_2025_2026.bib}
+\addbibresource{Bibliography_Master.bib}
 
 
 
@@ -149,34 +158,40 @@ breaklinks=true
 	\include{chapters/abstract}
 	 
 	\cleardoublepage
-	
+		
 	% ----------------------------------
 	%Table of contents
+	\begingroup
+	\small
+	\setlength{\parskip}{0pt}
 	\tableofcontents
-	\setcounter{tocdepth}{2}   % sections+subsections (0=chapters only, 1=sections, 2=subsections)
-	\renewcommand{\contentsname}{Contents}   % ToC heading text (default is fine)
-	\section*{Word count} 15,272 words.
-
+	\endgroup
+	
+	\clearpage                              % <-- break FIRST
 	\phantomsection
 	\addcontentsline{toc}{chapter}{List of Figures}
 	\begingroup
-	\renewcommand*{\addvspace}[1]{}
+	\makeatletter
+	\let\addvspace\@gobble
 	\listoffigures
+	\makeatother
 	\endgroup
 	
+	\clearpage                              % <-- break FIRST
 	\phantomsection
 	\addcontentsline{toc}{chapter}{List of Tables}
 	\begingroup
-	\renewcommand*{\addvspace}[1]{}
+	\makeatletter
+	\let\addvspace\@gobble
 	\listoftables
+	\makeatother
 	\endgroup
-
-
+	
 	% ----------------------------------
-	%include hte acronyms before the mainbody
+	%include the acronyms before the mainbody
 	\glsaddall[types=main]
 	\glsaddall[types=\acronymtype]
-	\printglossary[type=\acronymtype, title=List of Acronyms] % acronyms from 
+	\printglossary[type=\acronymtype, title=List of Acronyms]  
 
 	\mainmatter  
 		
@@ -184,9 +199,7 @@ breaklinks=true
 	\include{chapters/Introduction} 
 
 	%Chapters
-	\include{chapters/Chapter_1}
-	\include{chapters/Chapter_2}
-	\include{chapters/Chapter_3}
+	\include{chapters/Example_Chapter}
 	
 	\cleardoublepage
 	\include{chapters/Conclusion}
@@ -197,16 +210,18 @@ breaklinks=true
 
 
 	% Bibliography
-	\addchap{Reference List}	
+	\addchap{Reference List}
 	%TC:ignore
-	\printbibliography[
-	heading=none,
-	title={},
-	sorting=nyt
- 	]
+	\begin{refcontext}[sorting=nyt]
+		\printbibliography[
+		heading=none,
+		title={}
+		]
+	\end{refcontext}
+	
 
 	\cleardoublepage
-	\include{chapters/annex_links}
+	\include{chapters/Example_Annex}
 
 
 	\backmatter

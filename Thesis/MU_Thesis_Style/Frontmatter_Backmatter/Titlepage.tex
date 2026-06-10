@@ -3,21 +3,23 @@
 	\fbox{%
 		\begin{minipage}{0.9\textwidth}
 			\centering
-			% Title: larger font
-			{\bfseries \MakeUppercase{\LARGE \thesistitle}\par}
+			% Title: bold capitals, centred, single-spaced
+			{\singlespacing\bfseries\LARGE
+				\MakeUppercase{\thesistitle}\par}
 			
 			\vspace{1em}
 			
-			% Subtitle (if present): same size as rest
+			% Subtitle: bold capitals, centred, single-spaced, one size smaller
 			\if\relax\detokenize{\thesissubtitle}\relax\else
-			{\itshape\Large \thesissubtitle\par}
+			{\singlespacing\bfseries\Large
+				\MakeUppercase{\thesissubtitle}\par}
 			\vspace{2em}
 			\fi
 			
 			% Candidate details
-			{\bfseries\large \studentrank\ \studentname\par}
-			{\bfseries\large \studentnumber\par}
-			{\bfseries\large \studentqualifications\par}
+			{\bfseries\large \MakeUppercase{\studentrank\ \studentname}\par}
+			{\bfseries\large \MakeUppercase{\studentnumber}\par}
+			{\bfseries\large \MakeUppercase{\studentqualifications}\par}
 			\vspace{2em}
 			
 			% Degree / University / Year
